@@ -1,13 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap-icons/font/bootstrap-icons.css";
-html, body { height: 100%; }
-body { margin: 0; font-family: 'Inconsolata', monospace !important; }
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inconsolata', monospace !important;
+}
+
 .mat-tab-label .mat-tab-label-content {
     font-size: 26px !important;
     font-weight: 600;
 }
 
-.mat-tab-label{
+.mat-tab-label {
     padding: 0 !important;
     justify-content: left !important;
+}
+
+@media screen and (max-width: 500px) {
+    .mat-tab-label .mat-tab-label-content {
+        font-size: 20px !important;
+    }
 }
