@@ -35,7 +35,7 @@
     height: 400px;
     position: relative;
     width: 650px;
-    background: #F94892;
+    background: #fbdf07;
     box-sizing: border-box;
     font-size: 56px;
     line-height: 60px;
@@ -147,7 +147,7 @@
 .title {
     position: relative;
     z-index: 4;
-    color: #FFFFFF;
+    color: #5d54a4;
     text-shadow: 1px 1px 1px;
 }
 
