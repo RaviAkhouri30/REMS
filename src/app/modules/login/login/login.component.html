@@ -1,5 +1,5 @@
-<app-header></app-header>
 <div class="container-fluid">
+  <app-header></app-header>
   <div class="row">
     <div class="col-sm-7 info-container">
       <div class="info-inner-container">
@@ -15,6 +15,63 @@
       </div>
     </div>
     <div class="col-sm-5 login-form">
+      <div class="login-container">
+        <mat-tab-group selectedIndex="0">
+          <mat-tab label="Log In">
+            <div class="login">
+              <div class="title-login">Welcome to REMS</div>
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label>Email Id</mat-label>
+                <input type="text" matInput placeholder="Enter your Email Id" />
+              </mat-form-field>
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label>Password</mat-label>
+                <input
+                  type="password"
+                  matInput
+                  placeholder="Enter your Password"
+                />
+              </mat-form-field>
+              <button mat-raised-button class="submit-btn">Log In</button>
+            </div>
+          </mat-tab>
+          <mat-tab label="Sign Up">
+            <div class="sigup">
+              <div class="title-login">Welcome to REMS</div>
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label>Full Name</mat-label>
+                <input
+                  type="text"
+                  matInput
+                  placeholder="Enter your Full Name"
+                />
+              </mat-form-field>
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label>Email Id</mat-label>
+                <input type="text" matInput placeholder="Enter your Email Id" />
+              </mat-form-field>
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label>Password</mat-label>
+                <input
+                  type="password"
+                  matInput
+                  placeholder="Enter your Password"
+                />
+              </mat-form-field>
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label>Confirm Password</mat-label>
+                <input
+                  type="password"
+                  matInput
+                  placeholder="Confirm your Password"
+                />
+              </mat-form-field>
+              <button mat-raised-button class="submit-btn">Sign Up</button>
+            </div>
+          </mat-tab>
+        </mat-tab-group>
+      </div>
+
       <div class="screen__background">
         <span
           class="screen__background__shape screen__background__shape4"
@@ -29,40 +86,6 @@
           class="screen__background__shape screen__background__shape1"
         ></span>
       </div>
-      <mat-tab-group selectedIndex="0">
-        <mat-tab label="Log In">
-          <div class="title-login">Welcome to REMS</div>
-          <mat-form-field appearance="outline" class="form-field">
-            <mat-label>Email Id</mat-label>
-            <input type="text" matInput placeholder="Enter your Email Id" />
-          </mat-form-field>
-          <mat-form-field appearance="outline" class="form-field">
-            <mat-label>Password</mat-label>
-            <input type="password" matInput placeholder="Enter your Password" />
-          </mat-form-field>
-          <button mat-raised-button class="submit-btn">Log In</button>
-        </mat-tab>
-        <mat-tab label="Sign Up">
-          <div class="title-login">Welcome to REMS</div>
-          <mat-form-field appearance="outline" class="form-field">
-            <mat-label>Full Name</mat-label>
-            <input type="text" matInput placeholder="Enter your Full Name" />
-          </mat-form-field>
-          <mat-form-field appearance="outline" class="form-field">
-            <mat-label>Email Id</mat-label>
-            <input type="text" matInput placeholder="Enter your Email Id" />
-          </mat-form-field>
-          <mat-form-field appearance="outline" class="form-field">
-            <mat-label>Password</mat-label>
-            <input type="password" matInput placeholder="Enter your Password" />
-          </mat-form-field>
-          <mat-form-field appearance="outline" class="form-field">
-            <mat-label>Confirm Password</mat-label>
-            <input type="password" matInput placeholder="Confirm your Password" />
-          </mat-form-field>
-          <button mat-raised-button class="submit-btn">Sign Up</button>
-        </mat-tab>
-      </mat-tab-group>
     </div>
   </div>
   <app-footer></app-footer>

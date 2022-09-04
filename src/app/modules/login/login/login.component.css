@@ -7,18 +7,39 @@
     background-size: cover;
     height: 100%;
     overflow: hidden;
+    padding: 0;
 }
 
 .row {
     height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .login-form {
-    height: 100%;
+    position: relative;
+    max-height: max-content;
     background-color: #59246e;
     background: linear-gradient(90deg, #5D54A4, #7C78B8);
     padding: 100px 100px 0px;
     box-shadow: 6px 4px 15px #000000;
+    overflow-y: scroll;
+    max-width: max-content;
+    margin-left: auto;
+    overflow-x: hidden;
+}
+
+.sigup {
+    max-width: 402px;
+    max-height: 2000px;
+    min-height: 1600px;
+    display: block;
+}
+
+.login {
+    max-width: 402px;
+    max-height: 2000px;
+    min-height: 1500px;
+    display: block;
 }
 
 .info-container {
@@ -47,6 +68,7 @@
 
 
 .screen__background {
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
@@ -55,6 +77,11 @@
     z-index: 0;
     -webkit-clip-path: inset(0 0 0 0);
     clip-path: inset(0 0 0 0);
+    height: 100%;
+}
+
+.login-container {
+    height: 1200px;
 }
 
 .screen__background__shape {
@@ -181,18 +208,32 @@
 }
 
 @media screen and (max-width: 500px) {
-    .info-container{
+    .info-container {
         display: none;
     }
-    .login-form{
+
+    .login-form {
         width: 90%;
         margin: 70px auto;
         padding: 40px 15px;
         height: 100%;
         overflow-y: scroll;
+        border-radius: 4px 72px 0 0;
     }
-    .row {
-        background-color: rgba(0, 0, 0, 0.7);
+
+    .sigup {
+        max-height: 500px !important;
+        min-height: 100px;
+        display: block;
     }
     
+    .login {
+        max-height: 300px !important;
+        min-height: 100px;
+        display: block;
+    }
+
+    .login-container {
+        height: 100%;
+    }
 }
