@@ -1,0 +1,74 @@
+header {
+    margin: 0;
+    padding: 21px 21px 7px;
+    background: #f6f6f6;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    box-shadow: 2px 1px 5px #5D54A4;
+}
+
+.links {
+    margin-left: auto;
+    width: auto;
+}
+
+.links ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.links ul li {
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    color: #1f1c1c;
+    transition: color 500ms ease-in-out;
+    text-transform: capitalize;
+    padding-right: 5px;
+    border-right: 1px solid #acacac;
+    padding-top: 1px;
+}
+
+.links ul li:hover {
+    color: #5D54A4;
+}
+
+.brand {
+    font-size: 36px;
+    color: #5D54A4;
+    font-family: 'Lobster', cursive;
+    cursor: pointer;
+    transition: text-shadow 500ms ease-in-out;
+}
+.brand:hover {
+    text-shadow: 0px 0px 2px;
+}
+
+.user {
+    margin-left: 5px;
+    display: flex;
+}
+
+.user mat-icon {
+    color: #5D54A4;
+}
+
+.user-name {
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    color: #1f1c1c;
+    transition: color 500ms ease-in-out;
+    text-transform: capitalize;
+    padding-top: 1px;
+}
+
+.user-name:hover {
+    color: #5D54A4;
+}

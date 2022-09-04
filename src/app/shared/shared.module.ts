@@ -49,10 +49,14 @@ import { DialogModule } from '@angular/cdk/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { SideNavBarComponent } from './components/side-nav-bar/side-nav-bar.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
-    SideNavBarComponent
+    SideNavBarComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -151,7 +155,9 @@ import { SideNavBarComponent } from './components/side-nav-bar/side-nav-bar.comp
     OverlayModule,
     PortalModule,
     ScrollingModule,
-    DialogModule
+    DialogModule,
+    HeaderComponent,
+    FooterComponent
   ]
 })
 export class SharedModule { }
