@@ -1,0 +1,27 @@
+footer {
+    margin: 0;
+    padding: 21px 21px 15px;
+    background: #f6f6f6;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.copyright {
+    font-size: 16px;
+    color: #1f1c1c;
+}
+
+.social-media {
+    margin-left: auto;
+}
+
+i {
+    color: #1f1c1c !important;
+    font-size: 16px;
+    margin: auto 5px;
+}

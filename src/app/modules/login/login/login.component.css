@@ -1,7 +1,8 @@
+/* The Images are used from pixbay */
 .container-fluid {
-    background-image: url('./../../../../assets/rupees_image.jpg');
-    background-color: #FFFFFF;
-    position: absolute;
+    background-color: #c2bbbb;
+    background-image: url('./../../../../assets/rupee-4395462.jpg');
+    position: relative;
     top: 0;
     bottom: 0;
     right: 0;
@@ -34,12 +35,13 @@
     height: 400px;
     position: relative;
     width: 650px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background: #F94892;
+    box-sizing: border-box;
     font-size: 56px;
     line-height: 60px;
     padding: 30px 45px;
     border: none;
-    border-radius: 10px;
+    border-radius: 4px;
     box-shadow: 4px 3px 15px #000000;
     color: #FFFFFF;
     font-weight: 500;
@@ -117,7 +119,7 @@
     top: 0px;
     left: 0px;
     border-radius: 60px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-image: linear-gradient(#FF7F3F, #c54200);
 }
 
 .info-screen-bg2 {
@@ -128,7 +130,7 @@
     top: -16px;
     left: 286px;
     border-radius: 60px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-image: linear-gradient(#FF7F3F, #c54200);
 }
 
 .info-screen-bg3 {
@@ -139,13 +141,23 @@
     top: 229px;
     left: 286px;
     border-radius: 60px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-image: linear-gradient(#c54200, #FF7F3F);
 }
 
 .title {
     position: relative;
     z-index: 4;
-    color: #9e85ff;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 1px;
+}
+
+.title-login {
+    display: block;
+    font-size: 22px;
+    color: #7a7a7a;
+    text-align: center;
+    margin: 21px auto 30px;
+    font-family: 'Lobster', cursive;
 }
 
 .info-para {
@@ -155,6 +167,19 @@
     word-spacing: 2px;
     margin-top: 60px;
     z-index: 5;
-    color: #e23b3b;
+    color: #FBDF07;
     line-height: 30px;
+}
+
+.form-field {
+    width: 100%;
+    margin: 0px auto 0px;
+}
+
+.submit-btn {
+    width: 80%;
+    margin: 30px auto 15px;
+    display: block;
+    background-color: #ed6b2a;
+    color: #FFFFFF;
 }
