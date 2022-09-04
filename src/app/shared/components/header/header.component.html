@@ -1,12 +1,13 @@
 <header>
   <div class="brand">REMS</div>
-  <div class="hamberger">
+  <button class="hamberger" (click)="showMenu()">
     <i class="bi bi-list"></i>
-  </div>
-  <div class="links">
+  </button>
+  <div class="links" #hamMenu>
     <ul>
       <li>about</li>
       <li>contact us</li>
+      <li class="close" (click)="showMenu()">Close</li>
     </ul>
   </div>
   <div class="user">

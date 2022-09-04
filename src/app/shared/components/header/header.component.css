@@ -76,6 +76,15 @@ header {
 
 .hamberger {
     display: none;
+    outline: none;
+    background: none;
+    margin: none;
+    padding: 0;
+    border: none;
+}
+
+.close {
+    display: none;
 }
 
 @media screen and (max-width: 500px) {
@@ -93,6 +102,38 @@ header {
 
     .links {
         display: none;
+        position: absolute;
+        top: 57px;
+        right: 0;
+        left: 0;
+        background-color: #fdfdfd;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .links ul {
+        margin-top: 10px;
+        display: block;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+    }
+
+    .links ul li {
+        display: block;
+        border-right: none;
+        width: 100%;
+        margin: 0;
+        padding: 15px 0px;
+        text-align: center;
+        border-bottom: 1px solid #fdf9f9;
+    }
+
+    .close {
+        display: inline-block;
+        text-align: center;
+        width: 100%;
     }
 
     .user {
