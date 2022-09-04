@@ -45,6 +45,7 @@ header {
     cursor: pointer;
     transition: text-shadow 500ms ease-in-out;
 }
+
 .brand:hover {
     text-shadow: 0px 0px 2px;
 }
@@ -71,4 +72,41 @@ header {
 
 .user-name:hover {
     color: #5D54A4;
+}
+
+.hamberger {
+    display: none;
+}
+
+@media screen and (max-width: 500px) {
+    .hamberger {
+        display: inline-block;
+        height: 35px;
+        position: absolute;
+        top: 10px;
+        left: 120px;
+    }
+
+    .hamberger i {
+        font-size: 38px !important;
+    }
+
+    .links {
+        display: none;
+    }
+
+    .user {
+        margin-left: auto;
+    }
+
+    .user-name {
+        font-size: 28px;
+        padding-top: 5px;
+    }
+
+    mat-icon {
+        font-size: 34px;
+        height: 34px;
+        width: 34px;
+    }
 }
