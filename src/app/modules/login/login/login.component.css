@@ -183,3 +183,18 @@
     background-color: #ed6b2a;
     color: #FFFFFF;
 }
+
+@media screen and (max-width: 500px) {
+    .info-container{
+        display: none;
+    }
+    .login-form{
+        width: 90%;
+        margin: 70px auto;
+        padding: 100px 15px;
+        height: 70%;
+    }
+    .row {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+}
