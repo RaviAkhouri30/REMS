@@ -1,42 +1,45 @@
 <div class="container-fluid">
   <app-header></app-header>
-  <div class="row">
-    <div class="col-sm-7 info-container">
-      <div class="info-inner-container">
-        <div class="info-backgroud">
-          <span class="info-screen-bg1"></span>
-          <span class="info-screen-bg2"></span>
-          <span class="info-screen-bg3"></span>
+  <div class="custom-flex-container">
+    <div class="info-container">
+      <div class="info-backgroud">
+        <span class="info-screen-bg1"></span>
+        <span class="info-screen-bg2"></span>
+        <span class="info-screen-bg3"></span>
+      </div>
+      <div class="title">Ravi Expense Management System</div>
+      <p class="info-para">
+        Wooo Ho !!!, Now you can manage you expenses with ease.
+      </p>
+      <div class="row cards">
+        <div class="col-sm-2 card">
+          Last Month Expense (Aug 2022)
+          <div class="amount"><i class="bi bi-currency-rupee"></i> 10000.00</div>
         </div>
-        <div class="title">Ravi Expense Management System</div>
-        <p class="info-para">
-          Wooo Ho !!!, Now you can manage you expenses with ease.
-        </p>
+        <div class="col-sm-2 card">
+          last Day Expense (07 Sep 2022)
+          <div class="amount"><i class="bi bi-currency-rupee"></i> 10000.00</div>
+        </div>
+        <div class="col-sm-2 card">
+          last Year Expense (2021)
+          <div class="amount"><i class="bi bi-currency-rupee"></i> 10000.00</div>
+        </div>
+        <div class="col-sm-2 card">
+          Tax Calculation (2022-2023)
+          <div class="amount"><i class="bi bi-currency-rupee"></i> 10000.00</div>
+        </div>
+        <div class="col-sm-2 card">
+          Amount Due (Sep 2022)
+          <div class="amount"><i class="bi bi-currency-rupee"></i> 10000.00</div>
+        </div>
+        <div class="col-sm-2 card">
+          Last Due Date
+          <div class="amount"> 15 Sep 2022</div>
+        </div>
       </div>
     </div>
-    <div class="col-sm-5 login-form">
-      <div class="login-container">
-        <mat-tab-group selectedIndex="0">
-          <mat-tab label="Log In">
-            <div class="login">
-              <div class="title-login">Welcome to REMS</div>
-              <mat-form-field appearance="outline" class="form-field">
-                <mat-label>Email Id</mat-label>
-                <input type="text" matInput placeholder="Enter your Email Id" />
-              </mat-form-field>
-              <mat-form-field appearance="outline" class="form-field">
-                <mat-label>Password</mat-label>
-                <input
-                  type="password"
-                  matInput
-                  placeholder="Enter your Password"
-                />
-              </mat-form-field>
-              <button mat-raised-button class="submit-btn">Log In</button>
-            </div>
-          </mat-tab>
-          <mat-tab label="Sign Up">
-            <div class="sigup">
+    <div class="login-form">
+      <!-- <div class="sigup">
               <div class="title-login">Welcome to REMS</div>
               <mat-form-field appearance="outline" class="form-field">
                 <mat-label>Full Name</mat-label>
@@ -67,10 +70,7 @@
                 />
               </mat-form-field>
               <button mat-raised-button class="submit-btn">Sign Up</button>
-            </div>
-          </mat-tab>
-        </mat-tab-group>
-      </div>
+            </div> -->
 
       <div class="screen__background">
         <span
@@ -86,6 +86,21 @@
           class="screen__background__shape screen__background__shape1"
         ></span>
       </div>
+      <form class="login">
+        <div class="title-login">Welcome to REMS</div>
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Email Id</mat-label>
+          <input type="text" matInput placeholder="Enter your Email Id" />
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput placeholder="Enter your Password" />
+        </mat-form-field>
+        <div class="forgot-password">
+          <span style="cursor: pointer;">Forgot Password</span>
+        </div>
+        <button mat-raised-button class="submit-btn">Log In</button>
+      </form>
     </div>
   </div>
   <app-footer></app-footer>

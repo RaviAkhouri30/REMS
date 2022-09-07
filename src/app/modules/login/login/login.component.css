@@ -1,7 +1,12 @@
 /* The Images are used from pixbay */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 .container-fluid {
-    background-color: #c2bbbb;
-    background-image: url('./../../../../assets/rupee-4395462.jpg');
+    background: linear-gradient(90deg, #776BCC, #C7C5F4);
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
@@ -10,62 +15,54 @@
     padding: 0;
 }
 
-.row {
+.custom-flex-container {
+    display: flex;
+    width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    padding: 50px;
+    flex-wrap: nowrap;
+    overflow-y: auto;
 }
 
 .login-form {
     position: relative;
-    max-height: max-content;
-    background-color: #59246e;
+    height: 600px;
     background: linear-gradient(90deg, #5D54A4, #7C78B8);
-    padding: 100px 100px 0px;
+    padding: 0;
     box-shadow: 6px 4px 15px #000000;
-    overflow-y: scroll;
-    max-width: max-content;
+    width: 100%;
     margin-left: auto;
-    overflow-x: hidden;
-}
-
-.sigup {
-    max-width: 402px;
-    max-height: 2000px;
-    min-height: 1600px;
-    display: block;
+    overflow: hidden;
+    width: 360px;
+    box-shadow: 1px 1px 24px #5C5696;
+    border-radius: 0 72px 0 0;
+    border-bottom: 10px solid #8BD17C;
 }
 
 .login {
-    max-width: 402px;
-    max-height: 2000px;
-    min-height: 1500px;
-    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    width: 320px;
+    padding: 30px;
+    padding-top: 100px;
+    padding-right: 80px;
+    padding-left: 15px;
+    overflow-y: auto;
 }
 
 .info-container {
-    display: block;
-    padding-top: 100px;
-    padding-left: 100px;
-}
-
-.info-inner-container {
-    height: 400px;
     position: relative;
-    width: 650px;
-    background: #fbdf07;
-    box-sizing: border-box;
-    font-size: 56px;
-    line-height: 60px;
-    padding: 30px 45px;
-    border: none;
-    border-radius: 4px;
-    box-shadow: 4px 3px 15px #000000;
-    color: #FFFFFF;
-    font-weight: 500;
-    font-family: 'Lobster', cursive;
-    word-spacing: 10px;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    padding-bottom: 100px;
+    background: linear-gradient(90deg, #5D54A4, #7C78B8);
+    border-radius: 0 72px 0 0;
+    box-shadow: 1px 1px 24px #5C5696;
+    margin-right: 30px;
+    overflow: hidden;
 }
-
 
 .screen__background {
     display: block;
@@ -78,10 +75,6 @@
     -webkit-clip-path: inset(0 0 0 0);
     clip-path: inset(0 0 0 0);
     height: 100%;
-}
-
-.login-container {
-    height: 1200px;
 }
 
 .screen__background__shape {
@@ -135,63 +128,63 @@
 }
 
 .info-screen-bg1 {
-    height: 400px;
-    width: 400px;
+    height: 800px;
+    width: 800px;
     transform: rotate(45deg);
     position: absolute;
     top: 0px;
-    left: 0px;
+    left: -300px;
     border-radius: 60px;
-    background-image: linear-gradient(#FF7F3F, #c54200);
+    background: #58549d;
 }
 
 .info-screen-bg2 {
     height: 200px;
-    width: 500px;
-    transform: rotate(45deg);
+    width: 2500px;
+    transform: rotate(-45deg);
     position: absolute;
-    top: -16px;
-    left: 286px;
+    top: 368px;
+    left: -433px;
     border-radius: 60px;
-    background-image: linear-gradient(#FF7F3F, #c54200);
+    background: #7E7BB9;
 }
 
 .info-screen-bg3 {
-    height: 200px;
-    width: 500px;
+    height: 500px;
+    width: 600px;
     transform: rotate(-45deg);
     position: absolute;
-    top: 229px;
-    left: 286px;
+    top: -267px;
+    left: 436px;
     border-radius: 60px;
-    background-image: linear-gradient(#c54200, #FF7F3F);
+    background: linear-gradient(270deg, #6A679E, #5D54A4);
 }
 
 .title {
     position: relative;
     z-index: 4;
-    color: #5d54a4;
-    text-shadow: 1px 1px 1px;
+    color: #FFFFFF;
+    font-size: 42px;
+    font-family: 'Lobster', cursive;
+    line-height: 45px;
 }
 
 .title-login {
     display: block;
     font-size: 22px;
     color: #7a7a7a;
-    text-align: center;
-    margin: 21px auto 30px;
+    text-align: left;
+    margin-bottom: 30px;
+    margin-top: 20px;
     font-family: 'Lobster', cursive;
 }
 
 .info-para {
     position: relative;
-    width: 350px;
-    font-size: 24px;
-    word-spacing: 2px;
-    margin-top: 60px;
-    z-index: 5;
-    color: #FBDF07;
-    line-height: 30px;
+    font-size: 18px;
+    margin-top: 30px;
+    font-family: 'Lobster', cursive;
+    color: #FFFFFF;
 }
 
 .form-field {
@@ -200,40 +193,75 @@
 }
 
 .submit-btn {
+    background: #fff;
+    font-size: 14px;
+    margin-top: 30px;
+    padding: 0px 20px;
+    border-radius: 26px;
+    border: 1px solid #D4D3E8;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
     width: 80%;
-    margin: 30px auto 15px;
-    display: block;
-    background-color: #ed6b2a;
+    color: #4C489D;
+    box-shadow: 0px 2px 2px #5C5696;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.submit-btn:active,
+.submit-btn:focus,
+.submit-btn:hover {
+    border-color: #6A679E;
+    outline: none;
+}
+
+.cards {
+    margin-top: 30px;
+}
+
+.card {
+    height: 100px;
+    width: 100%;
+    margin-right: 10px;
     color: #FFFFFF;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 900;
+    margin-top: 30px;
+    min-width: 200px;
+}
+
+.card:nth-child(odd) {
+    background: #1C3879;
+}
+
+.card:nth-child(even) {
+    background: #A460ED;
+}
+
+.amount {
+    width: 100%;
+    text-align: right;
+    position: absolute;
+    bottom: 12px;
+    right: 10px;
+}
+
+.forgot-password {
+    position: relative;
+    width: 100%;
+    text-align: right;
+    color: #1C3879;
+    text-decoration: underline;
+    margin-top: -20px;
+    z-index: 10;
 }
 
 @media screen and (max-width: 500px) {
     .info-container {
         display: none;
-    }
-
-    .login-form {
-        width: 90%;
-        margin: 70px auto;
-        padding: 40px 15px;
-        height: 100%;
-        overflow-y: scroll;
-        border-radius: 4px 72px 0 0;
-    }
-
-    .sigup {
-        max-height: 500px !important;
-        min-height: 100px;
-        display: block;
-    }
-    
-    .login {
-        max-height: 300px !important;
-        min-height: 100px;
-        display: block;
-    }
-
-    .login-container {
-        height: 100%;
     }
 }
