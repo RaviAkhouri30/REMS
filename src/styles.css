@@ -21,6 +21,17 @@ body {
     justify-content: left !important;
 }
 
+.mat-form-field-flex {
+    width: 90% !important;
+}
+
+@media screen and (max-width: 768px) {
+
+    .mat-form-field-flex {
+        width: 80% !important;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .mat-tab-label .mat-tab-label-content {
         font-size: 20px !important;

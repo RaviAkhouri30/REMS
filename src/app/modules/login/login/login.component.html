@@ -12,66 +12,60 @@
         Wooo Ho !!!, Now you can manage you expenses with ease.
       </p>
       <div class="row cards">
-        <div class="col-sm-2 card">
+        <div class="col-sm-2 card exp-more-90">
           Last Month Expense (Aug 2022)
-          <div class="amount"><i class="bi bi-currency-rupee"></i> 10000.00</div>
+          <div class="expense-bar">
+            <mat-progress-bar
+              mode="determinate"
+              value="90"
+              [color]="'warn'"
+            ></mat-progress-bar>
+          </div>
+          <div class="amount">
+            <i class="bi bi-currency-rupee"></i> 90000.00
+          </div>
         </div>
-        <div class="col-sm-2 card">
+        <div class="col-sm-2 card exp-less-50">
           last Day Expense (07 Sep 2022)
-          <div class="amount"><i class="bi bi-currency-rupee"></i> 10000.00</div>
+          <div class="expense-bar">
+            <mat-progress-bar
+              mode="determinate"
+              value="30"
+              [color]="'primary'"
+            ></mat-progress-bar>
+          </div>
+          <div class="amount"><i class="bi bi-currency-rupee"></i> 100.00</div>
         </div>
-        <div class="col-sm-2 card">
+        <div class="col-sm-2 card exp-more-50">
           last Year Expense (2021)
-          <div class="amount"><i class="bi bi-currency-rupee"></i> 10000.00</div>
+          <div class="expense-bar">
+            <mat-progress-bar
+              mode="determinate"
+              value="60"
+              [color]="'accent'"
+            ></mat-progress-bar>
+          </div>
+          <div class="amount"><i class="bi bi-currency-rupee"></i> 1000.00</div>
         </div>
         <div class="col-sm-2 card">
           Tax Calculation (2022-2023)
-          <div class="amount"><i class="bi bi-currency-rupee"></i> 10000.00</div>
+          <div class="amount">
+            <i class="bi bi-currency-rupee"></i> 10000.00
+          </div>
         </div>
         <div class="col-sm-2 card">
           Amount Due (Sep 2022)
-          <div class="amount"><i class="bi bi-currency-rupee"></i> 10000.00</div>
+          <div class="amount">
+            <i class="bi bi-currency-rupee"></i> 10000.00
+          </div>
         </div>
         <div class="col-sm-2 card">
           Last Due Date
-          <div class="amount"> 15 Sep 2022</div>
+          <div class="amount">15 Sep 2022</div>
         </div>
       </div>
     </div>
     <div class="login-form">
-      <!-- <div class="sigup">
-              <div class="title-login">Welcome to REMS</div>
-              <mat-form-field appearance="outline" class="form-field">
-                <mat-label>Full Name</mat-label>
-                <input
-                  type="text"
-                  matInput
-                  placeholder="Enter your Full Name"
-                />
-              </mat-form-field>
-              <mat-form-field appearance="outline" class="form-field">
-                <mat-label>Email Id</mat-label>
-                <input type="text" matInput placeholder="Enter your Email Id" />
-              </mat-form-field>
-              <mat-form-field appearance="outline" class="form-field">
-                <mat-label>Password</mat-label>
-                <input
-                  type="password"
-                  matInput
-                  placeholder="Enter your Password"
-                />
-              </mat-form-field>
-              <mat-form-field appearance="outline" class="form-field">
-                <mat-label>Confirm Password</mat-label>
-                <input
-                  type="password"
-                  matInput
-                  placeholder="Confirm your Password"
-                />
-              </mat-form-field>
-              <button mat-raised-button class="submit-btn">Sign Up</button>
-            </div> -->
-
       <div class="screen__background">
         <span
           class="screen__background__shape screen__background__shape4"
@@ -86,20 +80,38 @@
           class="screen__background__shape screen__background__shape1"
         ></span>
       </div>
-      <form class="login">
+      <form class="login" [formGroup]="form">
         <div class="title-login">Welcome to REMS</div>
         <mat-form-field appearance="outline" class="form-field">
           <mat-label>Email Id</mat-label>
-          <input type="text" matInput placeholder="Enter your Email Id" />
+          <input type="text" matInput placeholder="Enter your Email Id" formControlName="userId" />
         </mat-form-field>
         <mat-form-field appearance="outline" class="form-field">
           <mat-label>Password</mat-label>
-          <input type="password" matInput placeholder="Enter your Password" />
+          <input
+            [type]="isShowPassword() ? 'text' : 'password'"
+            matInput
+            placeholder="Enter your Password" formControlName="password"
+          />
+          <mat-icon
+            matSuffix
+            class="visi-icon"
+            (click)="onShowPassword()"
+            *ngIf="!isShowPassword()"
+            >visibility</mat-icon
+          >
+          <mat-icon
+            matSuffix
+            class="visi-icon"
+            (click)="onShowPassword()"
+            *ngIf="isShowPassword()"
+            >visibility_off</mat-icon
+          >
         </mat-form-field>
         <div class="forgot-password">
-          <span style="cursor: pointer;">Forgot Password</span>
+          <span style="cursor: pointer">Forgot Password</span>
         </div>
-        <button mat-raised-button class="submit-btn">Log In</button>
+        <button mat-raised-button class="submit-btn" type="submit" (click)="onLogin()">Log In</button>
       </form>
     </div>
   </div>
