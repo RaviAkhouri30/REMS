@@ -61,7 +61,7 @@
     border-radius: 0 72px 0 0;
     box-shadow: 1px 1px 24px #5C5696;
     margin-right: 30px;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .screen__background {
@@ -172,7 +172,7 @@
 .title-login {
     display: block;
     font-size: 22px;
-    color: #7a7a7a;
+    color: #FF7F3F;
     text-align: left;
     margin-bottom: 30px;
     margin-top: 20px;
@@ -222,7 +222,7 @@
 }
 
 .card {
-    height: 100px;
+    min-height: 100px;
     width: 100%;
     margin-right: 10px;
     color: #FFFFFF;
@@ -252,16 +252,60 @@
 
 .forgot-password {
     position: relative;
-    width: 100%;
+    width: 90%;
     text-align: right;
     color: #1C3879;
     text-decoration: underline;
-    margin-top: -20px;
+    margin-top: 0px;
     z-index: 10;
+}
+
+.expense-bar {
+    margin: 10px 0;
+}
+
+.exp-less-50 {
+    background: #59CE8F !important;
+}
+
+.exp-more-50 {
+    background: #FF7F3F !important;
+}
+
+.exp-more-90 {
+    background: #D2001A !important;
+}
+
+.visi-icon {
+    cursor: pointer;
 }
 
 @media screen and (max-width: 500px) {
     .info-container {
         display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .forgot-password {
+        width: 80%;
+    }
+
+    .card {
+        min-height: 130px;
+        width: 150px;
+        font-size: 12px;
+        min-width: 100px;
+        margin: 10px auto;
+    }
+
+    .title {
+        font-size: 22px;
+        line-height: 20px;
+    }
+
+    .info-para {
+        font-size: 14px;
+        margin-top: 10px;
     }
 }
