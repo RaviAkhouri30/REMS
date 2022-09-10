@@ -1,27 +1,35 @@
+import { ScrollStrategy, ScrollStrategyOptions } from '@angular/cdk/overlay';
 import { Component, HostListener, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { FormIn } from 'src/app/shared/interfaces/form-in';
+import { SignUpComponent } from '../sign-up/sign-up.component';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, FormIn {
 
   /**
    * @Variables
    */
   private showPassword: boolean;
-  private loginForm!: FormGroup;
+  private loginForm!: FormGroup<any>;
+  private scrollStrategy: ScrollStrategy;
 
   /**
    * @description Class Constructor
    * @param fb FormBuilder
    */
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private dialog: MatDialog,
+    private sso: ScrollStrategyOptions
   ) {
     this.showPassword = false;
+    this.scrollStrategy = this.sso.noop();
   }
 
   /**
@@ -44,7 +52,7 @@ export class LoginComponent implements OnInit {
   /**
    * @description To get the Form
    */
-  public get form(): FormGroup {
+  public get form(): FormGroup<any> {
     return this.loginForm;
   }
 
@@ -68,7 +76,7 @@ export class LoginComponent implements OnInit {
     this.showPassword = true;
   }
 
-  public onLogin = (): void => {
+  public doLogin = (): void => {
     this.loginForm.markAllAsTouched();
     if (this.loginForm.invalid) {
       return;
@@ -76,12 +84,21 @@ export class LoginComponent implements OnInit {
     // try to do login
   }
 
+  public doSignUp = (): void => {
+    this.dialog.open(SignUpComponent, {
+      width: '400px',
+      disableClose: true,
+      height: '95%',
+      scrollStrategy: this.scrollStrategy
+    });
+  }
+
   @HostListener('window:keypress', ['$event'])
   public onEnterPress = (event: KeyboardEvent): void => {
     if(event.key === 'Enter'){
       event.stopPropagation();
       event.preventDefault();
-      this.onLogin();
+      this.doLogin();
     }
   }
 
