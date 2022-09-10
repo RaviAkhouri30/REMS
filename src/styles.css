@@ -21,8 +21,10 @@ body {
     justify-content: left !important;
 }
 
-.mat-form-field-flex {
-    width: 90% !important;
+@media screen and (max-width: 1025px) {
+    .mat-form-field-flex {
+        width: 90% !important;
+    }
 }
 
 @media screen and (max-width: 768px) {
