@@ -158,12 +158,12 @@
             mat-raised-button
             class="submit-btn"
             type="submit"
-            (click)="onLogin()"
+            (click)="doLogin()"
           >
-            Log In
+            Log In <mat-icon class="login-icon">keyboard_arrow_right</mat-icon>
           </button>
-          <button mat-raised-button class="submit-btn" type="button">
-            Sign Up
+          <button mat-raised-button class="submit-btn" type="button" (click)="doSignUp()">
+            Sign Up 
           </button>
         </div>
       </form>

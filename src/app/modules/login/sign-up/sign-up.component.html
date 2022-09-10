@@ -1,0 +1,165 @@
+<div class="custom-flex-container">
+  <mat-icon class="close-icon" (click)="doClose()">close</mat-icon>
+  <form class="sign-up-page" [formGroup]="form">
+  <div class="title-sign-up">Create Account</div>
+  <div class="title-info">
+    Wow ! You are just one step away from managing all your expenses. Signing up
+    here is very simple, will not take much time.
+  </div>
+  <hr />
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>First Name</mat-label>
+      <input
+        type="text"
+        matInput
+        placeholder="Enter your First Name"
+        formControlName="fName"
+      />
+      <mat-error *ngIf="form.controls['fName'].invalid">
+        <span
+          *ngIf="
+            form.controls['fName'].errors
+              ? form.controls['fName'].errors['required']
+              : ''
+          "
+          >Please enter your First Name</span
+        >
+        <span
+          *ngIf="
+            form.controls['fName'].errors
+              ? form.controls['fName'].errors['pattern']
+              : ''
+          "
+          >Please enter Valid First Name</span
+        >
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Last Name</mat-label>
+      <input
+        type="text"
+        matInput
+        placeholder="Enter your Last Name"
+        formControlName="lName"
+      />
+      <mat-error *ngIf="form.controls['lName'].invalid">
+        <span
+          *ngIf="
+            form.controls['lName'].errors
+              ? form.controls['lName'].errors['required']
+              : ''
+          "
+          >Please enter your Last Name</span
+        >
+        <span
+          *ngIf="
+            form.controls['lName'].errors
+              ? form.controls['lName'].errors['pattern']
+              : ''
+          "
+          >Please enter Valid Last Name</span
+        >
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Email Id</mat-label>
+      <input
+        type="text"
+        matInput
+        placeholder="Enter your Email Id"
+        formControlName="userId"
+      />
+      <mat-error *ngIf="form.controls['userId'].invalid">
+        <span
+          *ngIf="
+            form.controls['userId'].errors
+              ? form.controls['userId'].errors['required']
+              : ''
+          "
+          >Please enter your Email Id</span
+        >
+        <span
+          *ngIf="
+            form.controls['userId'].errors
+              ? form.controls['userId'].errors['email']
+              : ''
+          "
+          >Please enter Valid Email Id</span
+        >
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Password</mat-label>
+      <input
+        type="password"
+        matInput
+        placeholder="Enter your Password"
+        formControlName="password"
+      />
+      <mat-error *ngIf="form.controls['password'].invalid">
+        <span
+          *ngIf="
+            form.controls['password'].errors
+              ? form.controls['password'].errors['required']
+              : ''
+          "
+          >Please enter your Password</span
+        >
+        <span
+          *ngIf="
+            form.controls['password'].errors
+              ? form.controls['password'].errors['pattern']
+              : ''
+          "
+          >Please enter Valid Password</span
+        >
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Confirm Password</mat-label>
+      <input
+        type="password"
+        matInput
+        placeholder="Confirm your Password"
+        formControlName="cPassword"
+      />
+      <mat-error *ngIf="form.controls['cPassword'].invalid">
+        <span
+          *ngIf="
+            form.controls['cPassword'].errors
+              ? form.controls['cPassword'].errors['required']
+              : ''
+          "
+          >Please confirm your Password</span
+        >
+        <span
+          *ngIf="
+            form.controls['cPassword'].errors
+              ? form.controls['cPassword'].errors['passwordNotMatch']
+              : ''
+          "
+          >Your password doesn't match</span
+        >
+      </mat-error>
+    </mat-form-field>
+    <div class="form-action">
+      <button
+        mat-raised-button
+        class="submit-btn"
+        type="submit"
+        (click)="doSignUp()"
+      >
+        Sign Up <mat-icon class="sign-up-icon">keyboard_arrow_right</mat-icon>
+      </button>
+      <button
+        mat-raised-button
+        class="submit-btn close-btn"
+        type="submit"
+        (click)="doClose()"
+      >
+        Close <mat-icon class="sign-up-icon">close</mat-icon>
+      </button>
+    </div>
+  </form>
+  <hr />
+</div>

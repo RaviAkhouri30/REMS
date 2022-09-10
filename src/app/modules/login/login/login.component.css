@@ -241,7 +241,7 @@
     min-width: 200px;
     cursor: pointer;
     box-shadow: -2px -2px 6px rgb(46, 46, 46);
-    transition: all 400ms ease-in;
+    transition: all 200ms ease-in;
 }
 
 .card:nth-child(odd) {
@@ -295,6 +295,12 @@
 
 .visi-icon {
     cursor: pointer;
+}
+
+.login-icon {
+    position: absolute;
+    top: 5px;
+    right: 1px;
 }
 
 @media screen and (max-width: 500px) {
