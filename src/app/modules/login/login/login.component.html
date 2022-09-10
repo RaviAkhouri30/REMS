@@ -84,14 +84,38 @@
         <div class="title-login">Welcome to REMS</div>
         <mat-form-field appearance="outline" class="form-field">
           <mat-label>Email Id</mat-label>
-          <input type="text" matInput placeholder="Enter your Email Id" formControlName="userId" />
+          <input
+            type="text"
+            matInput
+            placeholder="Enter your Email Id"
+            formControlName="userId"
+          />
+          <mat-error *ngIf="form.controls['userId'].invalid">
+            <span
+              *ngIf="
+                form.controls['userId'].errors
+                  ? form.controls['userId'].errors['required']
+                  : ''
+              "
+              >Please enter your Email Id</span
+            >
+            <span
+              *ngIf="
+                form.controls['userId'].errors
+                  ? form.controls['userId'].errors['email']
+                  : ''
+              "
+              >Please enter Valid Email Id</span
+            >
+          </mat-error>
         </mat-form-field>
         <mat-form-field appearance="outline" class="form-field">
           <mat-label>Password</mat-label>
           <input
             [type]="isShowPassword() ? 'text' : 'password'"
             matInput
-            placeholder="Enter your Password" formControlName="password"
+            placeholder="Enter your Password"
+            formControlName="password"
           />
           <mat-icon
             matSuffix
@@ -107,11 +131,36 @@
             *ngIf="isShowPassword()"
             >visibility_off</mat-icon
           >
+          <mat-error *ngIf="form.controls['password'].invalid">
+            <span
+              *ngIf="
+                form.controls['password'].errors
+                  ? form.controls['password'].errors['required']
+                  : ''
+              "
+              >Please enter your Password</span
+            >
+            <span
+              *ngIf="
+                form.controls['password'].errors
+                  ? form.controls['password'].errors['pattern']
+                  : ''
+              "
+              >Please enter Valid Password</span
+            >
+          </mat-error>
         </mat-form-field>
         <div class="forgot-password">
           <span style="cursor: pointer">Forgot Password</span>
         </div>
-        <button mat-raised-button class="submit-btn" type="submit" (click)="onLogin()">Log In</button>
+        <button
+          mat-raised-button
+          class="submit-btn"
+          type="submit"
+          (click)="onLogin()"
+        >
+          Log In
+        </button>
       </form>
     </div>
   </div>
