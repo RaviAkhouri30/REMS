@@ -153,14 +153,19 @@
         <div class="forgot-password">
           <span style="cursor: pointer">Forgot Password</span>
         </div>
-        <button
-          mat-raised-button
-          class="submit-btn"
-          type="submit"
-          (click)="onLogin()"
-        >
-          Log In
-        </button>
+        <div class="form-action">
+          <button
+            mat-raised-button
+            class="submit-btn"
+            type="submit"
+            (click)="onLogin()"
+          >
+            Log In
+          </button>
+          <button mat-raised-button class="submit-btn" type="button">
+            Sign Up
+          </button>
+        </div>
       </form>
     </div>
   </div>
