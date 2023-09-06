@@ -1,5 +1,7 @@
 # REMS
 
+Website is hosted at -----  https://proud-mushroom-02cd12010.1.azurestaticapps.net/
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.6.
 
 ## Development server
